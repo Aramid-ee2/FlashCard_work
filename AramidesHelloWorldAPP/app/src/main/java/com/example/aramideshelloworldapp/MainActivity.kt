@@ -1,12 +1,14 @@
 package com.example.aramideshelloworldapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 
 // This Kotlin file is where user interaction will be handled
 class MainActivity : AppCompatActivity() {
@@ -14,13 +16,69 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         val flashcardQuestion = findViewById<TextView>(R.id.flashcard_question)
         val flashcardAnswer = findViewById<TextView>(R.id.flashcard_answer)
+        val addButton = findViewById<ImageView>(R.id.add_question_button)
+        val editButton = findViewById<ImageView>(R.id.edit_question)
+
         flashcardQuestion.setOnClickListener{
             flashcardQuestion.visibility = View.INVISIBLE
             flashcardAnswer.visibility = View.VISIBLE
+
+
         }
+        flashcardAnswer.setOnClickListener{
+            flashcardAnswer.visibility = View.INVISIBLE
+            flashcardQuestion.visibility = View.VISIBLE
+        }
+
+
+
+        val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                result ->
+                val data: Intent? = result.data
+                if (data != null) {
+                    val string1 = data.getStringExtra("string1")
+                    val string2 = data.getStringExtra("string2")
+                    flashcardQuestion.text = string1
+                    flashcardAnswer.text = string2
+
+                    // Log the value of the strings for easier debugging
+                    Log.i("MainActivity", "string1: $string1")
+                    Log.i("MainActivity", "string2: $string2")
+                    Snackbar.make(findViewById(R.id.flashcard_question), "Successfully created card", Snackbar.LENGTH_SHORT).show()
+                }
+                else {
+                    Log.i("MainActivity", "Returned null data from AddCardActivity")
+                }
+
+        }
+
+
+
+
+        addButton.setOnClickListener {
+            val intent = Intent(this, AddCardActivity::class.java)
+            resultLauncher.launch(intent)
+        }
+
+
+        editButton.setOnClickListener {
+            val intent = Intent(this, AddCardActivity::class.java)
+            val editquestion = flashcardQuestion.text.toString()
+            val editanswer = flashcardAnswer.text.toString()
+            intent.putExtra("stringKey1", editquestion)
+            intent.putExtra("stringKey2", editanswer)
+            resultLauncher.launch(intent)
+        }
+
+
+
+
+
+
+
+
+
     }
 }

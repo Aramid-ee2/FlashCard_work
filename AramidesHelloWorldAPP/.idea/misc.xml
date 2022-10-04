@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dapse/.android/AramidesHelloWorldAPP/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2125" />
+        <entry key="..\:/Users/dapse/.android/AramidesHelloWorldAPP/app/src/main/res/drawable/icon_addon.xml" value="0.19" />
         <entry key="..\:/Users/dapse/.android/AramidesHelloWorldAPP/app/src/main/res/layout/activity_main.xml" value="0.2796875" />
+        <entry key="..\:/Users/dapse/.android/AramidesHelloWorldAPP/app/src/main/res/layout/activity_main2.xml" value="0.30416666666666664" />
         <entry key="..\:/Users/dapse/AndroidStudioProjects/AramidesHelloWorldAPP/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
       </map>
     </option>
