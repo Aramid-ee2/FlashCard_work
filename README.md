@@ -10,11 +10,9 @@ Updated my flashcard app to enable more user interaction. The user of my app can
 
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
 <https://ezgif.com/maker/ezgif-2-e9a839bacac2-gif-im/ezgif-2-e9a839bacac2.gif>
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
 - [ x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
