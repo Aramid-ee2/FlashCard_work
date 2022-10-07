@@ -11,7 +11,7 @@ Updated my flashcard app to enable more user interaction. The user of my app can
 
 ### App Walk-though
 
-<https://ezgif.com/maker/ezgif-2-e9a839bacac2-gif-im/ezgif-2-e9a839bacac2.gif>
+<https://ezgif.com/gif-to-mp4/ezgif-3-6cbd21dbfc.gif>
 
 
 ## Required
@@ -24,7 +24,7 @@ Updated my flashcard app to enable more user interaction. The user of my app can
 ## Optional
 - [ x] User can edit a card
 - [ ] An error message is shown if the user doesn't enter both a Question and an Answer
-- [ ] A notification is shown if the card was created successfully
+- [x ] A notification is shown if the card was created successfully
 - [ ] User can also enter multiple choice answers when creating a card
 - [ ] App is further styled and customized!
 
