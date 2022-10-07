@@ -11,7 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 
 class AddCardActivity : AppCompatActivity() {
-    @SuppressLint("CutPasteId")
+   // @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
@@ -39,11 +39,11 @@ class AddCardActivity : AppCompatActivity() {
 
             if ((gettext == "") or (getanswer == "")) {
                 Log.i("MainActivity", "Returned null data from AddCardActivity")
-                val toast =
-                    Toast.makeText(applicationContext, "Incomplete Card", Toast.LENGTH_SHORT)
+                val toast = Toast.makeText(applicationContext, "Incomplete Card", Toast.LENGTH_SHORT)
                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
                 toast.show()
-            } else {
+            }
+            else {
                 val data = Intent()
                 data.putExtra(
                     "Question", gettext

@@ -8,10 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.google.android.material.snackbar.Snackbar
 
 // This Kotlin file is where user interaction will be handled
-class MainActivity : AppCompatActivity() {
+class  MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,6 +32,10 @@ class MainActivity : AppCompatActivity() {
             flashcardAnswer.visibility = View.INVISIBLE
             flashcardQuestion.visibility = View.VISIBLE
         }
+        //flashcardQuestion.setOnClickListener {
+           // flashcardAnswer.isVisible = !flashcardAnswer.isVisible
+       // }
+
 
 
 
@@ -38,8 +43,8 @@ class MainActivity : AppCompatActivity() {
                 result ->
                 val data: Intent? = result.data
                 if (data != null) {
-                    val string1 = data.getStringExtra("string1")
-                    val string2 = data.getStringExtra("string2")
+                    val string1 = data.getStringExtra("Question")
+                    val string2 = data.getStringExtra("Answer")
                     flashcardQuestion.text = string1
                     flashcardAnswer.text = string2
 
@@ -51,7 +56,6 @@ class MainActivity : AppCompatActivity() {
                 else {
                     Log.i("MainActivity", "Returned null data from AddCardActivity")
                 }
-
         }
 
 
@@ -71,14 +75,5 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("stringKey2", editanswer)
             resultLauncher.launch(intent)
         }
-
-
-
-
-
-
-
-
-
     }
 }
