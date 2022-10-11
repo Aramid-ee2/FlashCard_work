@@ -1,7 +1,26 @@
 # FlashCard_work
 FlashCard App
 ## Ara_flashcardApp2/ AramidesHelloWorldApp
-📝 `NOTE` Paste this template at the top of your existing `README.md` file from the last lab.
+## Lab 3
+
+### App Description
+` Updated the flashcard App to save all questions created in the flashcard app. Users can navigate through the questions using a button. 
+
+### App Walk-though
+
+
+<https://ezgif.com/gif-to-mp4/ezgif-4-a97d3535b9.gif>
+
+
+## Required
+- [x ] User can create a card and still see their created card when the app is relaunched.
+- [ x] User can create muliple cards and browse through all created cards
+
+## Optional
+- [ ] User can delete a card and no longer see it in their deck anymore
+- [ ] Flashcards are shown in random order instead of the order they were created in
+- [x ] User can edit a card and see the edit saved when they browse through their deck of cards
+- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
 
 ## Lab 2
 
